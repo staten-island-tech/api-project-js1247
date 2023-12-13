@@ -11,5 +11,10 @@ async function getData(URL) {
   catch (error) {
     console.log(error);
   }
-}
+  async function insertAuction() {
+  }
+  insertAuction();
+  console.log("");
+  document.querySelector(".cards").textContent = "";
+};
 getData(URL);
