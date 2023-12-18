@@ -29,7 +29,7 @@ function sortString(name){
     console.log(x);
 }
 sortString("sadwasdwasdsadaxcclxiod")
-let x = [1, 2, 3];
+let xy = [1, 2, 3];
 let y = [4, 5, 6];
 let z = {...x, ...y};
 x = [...x, ...y];
