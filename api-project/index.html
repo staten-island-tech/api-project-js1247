@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,19 @@
     <title>API Project</title>
   </head>
   <body>
-    <div class="cards"></div>
+    <h1>Hypixel Skyblock Auction</h1>
+    <div class="container">
+      <form id="searchForm">
+        <label for="search">Enter Item Name: </label>
+        <input type="text" itemName="search" class="search" required />
+        <button class="search-btn">Search</button>
+      </form>
+      <br />
+      <button class="all-btn">Show All</button>
+    </div>
+
+    <div class="content"></div>
+
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
