@@ -1,4 +1,4 @@
 export { DOMSelectors };
 const DOMSelectors = {
-    container: document.querySelector(".cards"),
+    content: document.querySelector(".content"),
 }
