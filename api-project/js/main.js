@@ -13,7 +13,7 @@ async function getData() {
       return data.items;
     } else {
       // Handle non-200 status codes
-      console.log(`Error: ${response.status} - ${response.statusText}`);
+      console.log(`Error`);
     }
   } catch (error) {
     console.log(error);
