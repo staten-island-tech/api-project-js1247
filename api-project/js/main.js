@@ -57,3 +57,5 @@ DOMSelectors.input.addEventListener("submit", search);
 DOMSelectors.allBtn.addEventListener("click", showAll);
 
 getData().then((items) => displayItems(items)); // Initial load (show all items)
+
+//https://api.hypixel.net/v2/counts need to make second endpoint for the project, display the active skyblock players in the .online
