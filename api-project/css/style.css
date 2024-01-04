@@ -30,12 +30,11 @@ label {
 
 .search {
   padding: 0.5rem;
-  font-size: 0.875rem;
-  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .search-btn, .all-btn {
-  padding: 0.625rem 1.25rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   background-color: #4e8cff;
@@ -55,7 +54,7 @@ label {
 
 .item {
   background-color: #2b2b2b;
-  border: 0.063rem solid #333;
+  border: 0.1rem solid #333;
   border-radius: 0.25rem;
   padding: 1rem;
   margin-bottom: 2rem;
