@@ -1,16 +1,18 @@
 import { DOMSelectors } from "./dom";
 import "../css/style.css";
 
-const URL = "https://api.hypixel.net/v2/resources/skyblock/items";
+const URL = "https://api.hypixel.net/v2/resources/skyblock/items"; // Hypixel API endpoint for Skyblock items
 
 async function getData() {
+  // Function to fetch data from the Hypixel API
   try {
     const response = await fetch(URL);
-
-    // Check for a successful response
     if (response.status >= 200) {
+      // Check for a successful response
       const data = await response.json();
-      return data.items;
+      return data.items; //Return the 'items' array
+    } else {
+      throw new Error(`Failed to fetch data. Status: ${response.status}`); // If the response status is not successful, throw an error with a message
     }
   } catch (error) {
     console.log(error);
@@ -18,6 +20,7 @@ async function getData() {
 }
 
 function displayItems(items) {
+  // Function to display items on the webpage
   DOMSelectors.content.innerHTML = ""; // Clear previous content
 
   items.forEach((item) => {
@@ -36,15 +39,16 @@ function displayItems(items) {
 
 async function search(event) {
   event.preventDefault();
-  const searchValue = DOMSelectors.search.value.toLowerCase();
+  const searchValue = DOMSelectors.search.value.toLowerCase(); // Get the lowercase search value
   const allItems = await getData();
   const filteredItems = allItems.filter((item) =>
     item.name.toLowerCase().includes(searchValue)
-  );
+  ); // Filter items based on the search value
   displayItems(filteredItems);
 }
 
 async function showAll() {
+  // Function to show all items
   const allItems = await getData();
   displayItems(allItems);
 }
@@ -52,5 +56,4 @@ async function showAll() {
 DOMSelectors.input.addEventListener("submit", search);
 DOMSelectors.allBtn.addEventListener("click", showAll);
 
-// Initial load (show all items)
-getData().then((items) => displayItems(items));
+getData().then((items) => displayItems(items)); // Initial load (show all items)
