@@ -1,12 +1,12 @@
 import { DOMSelectors } from "./dom";
 import "../css/style.css";
 
-const URL = "https://api.hypixel.net/v2/resources/skyblock/items"; // Hypixel API endpoint for Skyblock items
+const itemURL = "https://api.hypixel.net/v2/resources/skyblock/items"; // Hypixel API endpoint for Skyblock items
 
 async function getData() {
   // Function to fetch data from the Hypixel API
   try {
-    const response = await fetch(URL);
+    const response = await fetch(itemURL);
     if (response.status >= 200) {
       // Check for a successful response
       const data = await response.json();
