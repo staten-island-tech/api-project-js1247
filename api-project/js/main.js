@@ -7,7 +7,7 @@ async function getData() {
   // Function to fetch data from the Hypixel API
   try {
     const response = await fetch(itemURL);
-    if (response.status >= 200) {
+    if (response.status === 200) {
       // Check for a successful response
       const data = await response.json();
       return data.items; //Return the 'items' array
