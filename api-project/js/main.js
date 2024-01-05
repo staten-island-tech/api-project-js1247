@@ -58,9 +58,9 @@ DOMSelectors.allBtn.addEventListener("click", showAll);
 
 getData().then((items) => displayItems(items)); // Initial load (show all items)
 
-//https://api.hypixel.net/v2/counts make second endpoint for the project, display the current skyblock player count in the .online
+//https://api.hypixel.net/v2/counts second endpoint, display the current skyblock player count in the .playerCount
 
-const playerCountURL = "https://api.hypixel.net/v2/counts"; // Hypixel API endpoint for player counts
+const playerCountURL = "https://api.hypixel.net/v2/counts?key=3e6f2847-208d-472f-9a3e-528bb2ad7a17"; // Hypixel API endpoint for player count
 
 async function getPlayerCount() {
   try {
@@ -86,7 +86,7 @@ async function getPlayerCount() {
 async function displayPlayerCount() {
   try {
     const playerCount = await getPlayerCount();
-    const playerCountHTML = `<p>Active Players: ${playerCount}</p>`;
+    const playerCountHTML = `<p>Skyblock Player Count: ${playerCount}</p>`;
     DOMSelectors.playerCount.insertAdjacentHTML("beforeend", playerCountHTML);
   } catch (error) {
     console.log(error);
@@ -94,5 +94,3 @@ async function displayPlayerCount() {
 }
 
 displayPlayerCount();
-
-//apikey: ebefb38a-27de-4c0b-ae82-a78aa9dee446
