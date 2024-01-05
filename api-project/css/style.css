@@ -76,3 +76,22 @@ label {
   background-color: #363636;
   border-color: #4e8cff;
 }
+.playerCount {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #2b2b2b;
+  border: 0.1rem solid #333;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.playerCount p {
+  color: #4e8cff;
+  margin: 0;
+}
+
+.playerCount:hover {
+  background-color: #363636;
+  border-color: #4e8cff;
+}
