@@ -68,7 +68,7 @@ async function getPlayerCount() {
 
     if (response.status === 200) {
       const data = await response.json();
-      return data.games.GAME_TYPE.players;
+      return data.games.SKYBLOCK.players;
     } else if (response.status === 403) {
       throw new Error("Access forbidden. Please check your API key.");
     } else if (response.status === 429) {
