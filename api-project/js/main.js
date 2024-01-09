@@ -60,7 +60,7 @@ getData().then((items) => displayItems(items)); // Initial load (show all items)
 
 //https://api.hypixel.net/v2/counts second endpoint, display the current skyblock player count in the .playerCount
 
-const playerCountURL = "https://api.hypixel.net/v2/counts?key=3e6f2847-208d-472f-9a3e-528bb2ad7a17"; // Hypixel API endpoint for player count
+const playerCountURL = "https://api.hypixel.net/v2/counts?key=f05eb347-72f3-4315-b1e8-c03434bd842b"; // Hypixel API endpoint for player count
 
 async function getPlayerCount() {
   try {
