@@ -1,7 +1,7 @@
 body {
   background-color: #1a1a1a;
   color: #fff;
-  font-family: cursive;
+  font-family: 'Courier New', Courier, monospace;
   margin: 0;
   padding: 0;
 }
@@ -83,10 +83,10 @@ label {
   border-radius: 0.25rem;
   box-sizing: border-box;
   transition: background-color 0.3s ease;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
-.playerCount p {
+.playerCount  {
   color: #4e8cff;
   margin: 0;
 }

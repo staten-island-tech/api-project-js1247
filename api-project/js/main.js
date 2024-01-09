@@ -86,7 +86,7 @@ async function getPlayerCount() {
 async function displayPlayerCount() {
   try {
     const playerCount = await getPlayerCount();
-    const playerCountHTML = `<p>Skyblock Player Count: ${playerCount}</p>`;
+    const playerCountHTML = `<h2>Skyblock Player Count: ${playerCount}</h2>`;
     DOMSelectors.playerCount.insertAdjacentHTML("beforeend", playerCountHTML);
   } catch (error) {
     console.log(error);
